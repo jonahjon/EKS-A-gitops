@@ -1,0 +1,23 @@
+apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+kind: Cluster
+metadata:
+  creationTimestamp: null
+  name: jonahjo
+spec:
+  controlPlaneReplicas: 1
+  gitops:
+    flux:
+      branch: main
+      gitProvider: github
+      namespace: flux-system
+      owner: jonahjon
+      path: clusters/jonahjo
+      personal: true
+      repository: EKS-A-gitops
+  infrastructureRef:
+    apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+    kind: VSphereCluster
+    name: jonahjo
+  kubernetesVersion: "1.20"
+  workerNodeReplicas: 2
+status: {}
