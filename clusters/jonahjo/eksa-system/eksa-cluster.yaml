@@ -19,5 +19,5 @@ spec:
     kind: VSphereCluster
     name: jonahjo
   kubernetesVersion: "1.20"
-  workerNodeReplicas: 2
+  workerNodeReplicas: 3
 status: {}
